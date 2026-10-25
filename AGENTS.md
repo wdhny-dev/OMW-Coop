@@ -1,7 +1,7 @@
 # AGENTS.md — OpenMW Multiplayer (co-op) project rules
 
 ## Project
-Co-op multiplayer for OpenMW 0.52.0 (Morrowind). This repo is a fork of OpenMW;
+Co-op multiplayer for OpenMW 0.51.0 (Morrowind). This repo is a fork of OpenMW;
 all multiplayer code lives in `components/multiplayer/` and `apps/openmwmp/`.
 Upstream must stay merge-friendly: never reformat or move upstream code;
 MP hooks are small patches marked with `// [MP]` comments.
