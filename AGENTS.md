@@ -1,17 +1,17 @@
 # AGENTS.md — OpenMW Multiplayer (co-op) project rules
 
 ## Project
-Co-op multiplayer for OpenMW 0.52.0 (Morrowind). This repo is a fork of OpenMW;
-all multiplayer code lives in `components/multiplayer/` and `apps/openmwmp/`.
-Upstream must stay merge-friendly: never reformat or move upstream code;
-MP hooks are small patches marked with `// [MP]` comments.
-
+Co-op multiplayer for OpenMW (Morrowind). Fork point: tag openmw-0.51.0
+(last stable release; 0.52.0 is in development on upstream master, rebase onto it
+is tracked as a separate task). All multiplayer code lives in
+`components/multiplayer/` and `apps/openmwmp/`.
+...
 ## Build / test (single source of truth)
-- Configure: `cmake --preset server-debug`
-- Build:     `cmake --build --preset server-debug`
-- Tests:     `ctest --preset server-debug`
+...
 - Gate before EVERY commit: `bash scripts/dev/verify.sh`
   (build + ctest + clang-format/clang-tidy on touched files). No exceptions.
+  Note: verify.sh itself is a deliverable of task 001; until it exists,
+  the gate is manual `cmake --build` + `ctest`.
 
 ## Style
 - C++20; root `.clang-format` / `.clang-tidy` are law.
